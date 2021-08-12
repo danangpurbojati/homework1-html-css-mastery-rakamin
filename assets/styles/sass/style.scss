@@ -1,0 +1,252 @@
+@import "reset";
+@import "fonts";
+@import "colors";
+
+$mediumScreen: 768px;
+
+body{
+    background-color: $backgroundColor;
+}
+
+.container{
+    padding: 0 148px;
+
+    @media screen and (max-width: $mediumScreen) {
+        padding: 0 30px;
+    }
+}
+
+.title{
+    color: green;
+    text-transform: uppercase;
+    font-family: $interFont;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 12px;
+    margin-bottom: 16px;
+
+    @media screen and (max-width: $mediumScreen) {
+        text-align: center;
+    }
+}
+
+.hero-wrapper{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    .hero-text{
+        flex-grow: 2;
+        color: $darkColor;
+
+        h1{
+            text-transform: capitalize;
+            line-height: 60px;
+            font-size: 44px;
+            font-weight: bold;
+            font-family: $heeboFont;
+            font-weight: 700;
+        }
+
+        p{
+            margin-top: 40px;
+            font-family: $heeboFont;
+            line-height: 23.5px;
+            font-weight: 400;
+            text-align: justify;
+        }
+    }
+
+    .hero-image{
+        flex-grow: 1;
+        width: 100%;
+        text-align: center;
+
+        img{
+            border-radius: 50%;
+            width: 243px;
+            box-shadow: -5px 13px 0 0 $shadowColor;
+        }
+    }
+
+    @media screen and (max-width: $mediumScreen) {
+        flex-direction: column-reverse;
+        padding-top: 30px;
+
+        .hero-text{
+            text-align: center;
+
+            p{
+                text-align: inherit;
+            }
+        }
+    }
+}
+
+.profile-wrapper{
+    background-color: $shadowColor;
+    padding-bottom: 55px;
+
+    .profile-content{
+        display: flex;
+
+        @media screen and (max-width: $mediumScreen) {
+            flex-direction: column;
+            
+        }
+    }
+
+    .contact-info{
+        flex-grow: 1;
+
+        .info{
+            display: flex;
+            margin-bottom: 22px;
+            align-items: center;
+
+            img{
+                margin-right: 20px;
+                object-fit: contain;
+                width: 20px;
+            }
+
+            p{
+                line-height: 19px;
+                font-family: $interFont;
+            }
+        }
+
+        .education-info{
+            font-family: $interFont;
+            margin-bottom: 15px;
+
+            h3{
+               line-height: 17px;
+               font-size: 14px;
+               text-transform: capitalize;
+               font-weight: 600; 
+            }
+
+            .education-major{
+                margin: 6px 0;
+                font-size: 12px;
+                display: flex;
+
+                .major{
+                    font-style: italic;
+                    margin-right: 12px;
+                }
+            }
+
+            ul{
+                list-style-position: inside;
+                font-size: 12px;
+                color: $greySubText;
+
+                li{
+                    margin-bottom: 6px;
+                }
+            }
+        }
+    }
+}
+
+.project-section{
+    padding-top: 29px;
+
+    .project-wrapper{
+        display: flex;
+        border-bottom: 1px solid #E0E0E0;
+        padding-bottom: 15px;
+        margin-bottom: 31px;
+    
+        .project-image{
+            height: 180px;
+            width: 246px;
+            border-radius: 6px;
+            margin-right: 18px;
+    
+            img{
+                object-fit: cover;
+                border-radius: 6px;
+            }
+        }
+    
+        .project-text{
+            font-family: $heeboFont;
+    
+            .project-title{
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 44px;
+                color: $darkColor;
+            }
+    
+            .badge-wrapper{
+                display: flex;
+                align-items: center;
+                margin-top: 20px;
+    
+                .badge{
+                    background-color: $darkColor;
+                    color: #fff;
+                    font-weight: 900;
+                    font-size: 18px;
+                    border-radius: 16px;
+                    padding: 0 10px;
+                    margin-right: 26px;
+                }
+    
+                .badge-content{
+                    font-size: 20px;
+                    color: $lightColor;
+                    font-weight: 400;
+                }
+            }
+    
+            .project-desc{
+                margin-top: 17px;
+                color: $darkColor;
+                line-height: 23.5px;
+            }
+        }
+    
+        @media screen and (max-width: $mediumScreen) {
+            flex-direction: column;
+            
+            .project-image{
+                width: 100%;
+    
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-position: center;
+                }
+            }
+        }
+    }
+}
+
+
+footer{
+    padding: 51px;
+    margin-top: 83px;
+    text-align: center;
+    font-family: $heeboFont;
+
+    .social-wrapper{
+        margin-bottom: 26px;
+
+        img{
+            margin: 0 17.5px;
+        }
+    }
+
+    p{
+        font-size: 14px;
+        line-height: 21px;
+        color: $darkColor;
+    }
+}
